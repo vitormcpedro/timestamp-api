@@ -8,8 +8,10 @@ var monthNames = [
   "November", "December"
 ];
 
+app.use(express.static(__dirname))
+
 app.get('/', function (req, res) {
-  res.send('Homepage!')
+  res.sendFile('index.html')
 })
 
 app.get("/:inputDate", function(req, res) {
